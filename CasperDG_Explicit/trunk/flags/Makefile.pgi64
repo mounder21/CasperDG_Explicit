@@ -1,0 +1,25 @@
+# Compiler and Archiver
+ifdef MPIPRG
+CC = pgcc
+FC = mpif90
+else
+CC = pgcc
+FC = pgf90
+endif
+
+LD = $(FC)
+AR = ar
+
+# Optimization level
+#CFLAGS  = -O2 -msse2 -m64 #gcc
+CFLAGS  = -fastsse -tp=k8-64
+FFLAGS  = -r8 -fastsse -tp=k8-64 #-byteswapio
+
+# Linking options
+LDFLAGS = $(FFLAGS)
+
+# Archiver options
+ARFLAGS = rv
+
+# Indexing the archive
+RANLIB  = ranlib

@@ -1,0 +1,34 @@
+# Compiler Parallel/Serial
+ifdef MPIPRG
+CC = mpicc
+FC = mpif90
+else
+CC = gcc
+FC = /usr/bin/gfortran
+FC = gfortran
+endif
+
+# Linker
+LD = $(FC)
+
+# Archiver
+AR = ar
+
+# Optimization level
+CFLAGS  = #-O2
+
+FFLAGS = -O2 -fconvert=big-endian 
+
+#FFLAGS = -O0 -pg -fconvert=big-endian -Wall -Wextra -pedantic -fimplicit-none -fbounds-check -fbacktrace #-ffpe-trap=zero,overflow,underflow 
+
+#FFLAGS += -DUSE_LAPACK -Lliblapack.so.3
+
+
+# Linking flags
+LDFLAGS = $(FFLAGS)
+
+# Archiver flags
+ARFLAGS = rv
+
+# Indexing the archive
+RANLIB  = ranlib

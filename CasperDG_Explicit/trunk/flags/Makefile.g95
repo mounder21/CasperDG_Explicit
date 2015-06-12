@@ -1,0 +1,16 @@
+# Compiler and Archiver
+FC = g95
+LD = $(FC)
+AR = ar
+
+# Optimization level
+FFLAGS  = -r8 -O2 -march=pentium4 -msse2
+
+# Linking options
+LDFLAGS = $(FFLAGS)
+
+# Archiver options
+ARFLAGS = rv
+
+# Indexing the archive
+RANLIB  =	ranlib

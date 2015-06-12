@@ -1,0 +1,47 @@
+# Compiler Parallel/Serial
+ifdef MPIPRG
+CC = mpicc
+FC = mpif90
+else
+CC = icpc
+FC = ifort
+endif
+
+#FC = ifort
+
+# Linker
+LD = $(FC)
+
+# Archiver
+AR = ar
+
+# Optimization level
+CFLAGS  = -O2
+
+MKLPATH = /opt/intel/composer_xe_2013.0.079/mkl/lib/intel64
+MKLINCLUDE = /opt/intel/composer_xe_2013.0.079/compiler/include
+
+# sequential mkl
+FFLAGS  = -O2 -convert big_endian -DUSE_LAPACK -L$(MKLPATH) -I$(MKLINCLUDE) -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread
+
+# parallel mkl
+#FFLAGS  = -O3 -convert big_endian -DUSE_LAPACK -L$(MKLPATH) -I$(MKLINCLUDE) -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread
+
+#FFLAGS = -O2 -convert big_endian 
+#FFLAGS  = -p -g -O2 -convert big_endian
+## gprof --flat-profile ~/bin/dg3d.serial gmon.out
+
+#FFLAGS = -convert big_endian -no-prec-div -O0 -r8 -extend_source -vec-report=0 -fPIC -warn all -gen_interfaces -fpe0 -check all -g -traceback
+
+#FFLAGS += -L/opt/intel/composer_xe_2013.0.079/compiler/lib/intel64
+#FFLAGS += -L/opt/intel/composer_xe_2013.0.079/mkl/lib/intel64
+
+
+# Linking flags
+LDFLAGS = $(FFLAGS)
+
+# Archiver flags
+ARFLAGS = rv
+
+# Indexing the archive
+RANLIB  = ranlib

@@ -1,0 +1,51 @@
+CasperDG is a 2D unstructured explicit Euler solver written by Andrew Kirby, University of Wyoming (2013).
+The code is written in Fortran90.
+
+The spatial discretization is a modal DG FEM formulation.
+It has H1, nodal, and monomial bases. 
+It can do basisDegree = 0,1,2 polynomial orders for the basis.
+Thus the solution degrees are first, second, and third order accurate, respectively.
+
+The temporal discretization has Euler and Runke-Kutta four-stage implementations.
+
+
+CapserDG.f90 is the main program file.
+Currently, the code does not have an input file. All inputs are prescribed in 
+CaspeerDG.f90. When you change any inputs, recompile the code given the 
+instructions below.
+
+To compile using ifort (gfortran):
+1.)	cd CasperDG/trunk/serial
+2.)	make ifort   or   make gfortran
+
+To clean the objects:
+1.)	make clean
+
+
+To run the executable (which is located in CasperDG/trunk/serial):
+1.)	./casperDG.serial
+
+There are various meshes located in the meshes folder located in the trunk folder.
+There is two naca 0012 meshes, a fine bump mesh, and a coarse bump mesh.
+All of the *aba.msh meshes are meshes with no bodies in it used for mesh resolution study.
+
+
+To view output:
+download paraview
+The output files are vtu file types.
+
+Sample terminal output:
+ # Writing to File...           0
+           1  3.67982435860106441E-002
+           2  3.67982435860106441E-002
+           3  3.67147457072890121E-002
+           4  3.66321631368861783E-002
+           5  3.65504267651982906E-002
+           6  3.64694713482560176E-002
+           7  3.63892205024412205E-002
+           8  3.63096323672838367E-002
+           9  3.62306589884602223E-002
+
+
+The first number is the iteration number and the second number is the L2 spatial residual norm.
+

@@ -1,0 +1,23 @@
+# Compiler and Archiver
+ifdef MPIPRG
+FC = pgf90
+#FC = mpif90
+else
+FC = pgf90
+endif
+
+LD = $(FC)
+AR = ar
+
+# Optimization level
+FFLAGS  = -r8 -byteswapio -fastsse -mcmodel=medium -Mlarge_arrays
+#-tp=k8-32
+
+# Linking options
+LDFLAGS =  -L/usr/lib64 -lmpich-pgi -mcmodel=medium -Mlarge_arrays
+
+# Archiver options
+ARFLAGS = rv
+
+# Indexing the archive
+RANLIB  =	ranlib
