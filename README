@@ -1,5 +1,5 @@
-CasperDG is a 2D unstructured explicit Euler solver written by Andrew Kirby, University of Wyoming (2013).
-The code is written in Fortran90.
+CasperDG is a 2D unstructured triangle explicit Euler solver written by Andrew Kirby, University of Wyoming (2013).
+The code is written in Fortran90. 
 
 The spatial discretization is a modal DG FEM formulation.
 It has H1, nodal, and monomial bases. 
@@ -11,7 +11,7 @@ The temporal discretization has Euler and Runke-Kutta four-stage implementations
 
 CapserDG.f90 is the main program file.
 Currently, the code does not have an input file. All inputs are prescribed in 
-CaspeerDG.f90. When you change any inputs, recompile the code given the 
+CaspserDG.f90. When you change any inputs, recompile the code given the 
 instructions below.
 
 To compile using ifort (gfortran):
@@ -26,8 +26,8 @@ To run the executable (which is located in CasperDG/trunk/serial):
 1.)	./casperDG.serial
 
 There are various meshes located in the meshes folder located in the trunk folder.
-There is two naca 0012 meshes, a fine bump mesh, and a coarse bump mesh.
-All of the *aba.msh meshes are meshes with no bodies in it used for mesh resolution study.
+There are two naca 0012 meshes, a fine bump mesh, and a coarse bump mesh.
+All of the *aba.msh meshes are meshes with no bodies in them and are used for mesh resolution study.
 
 
 To view output:
