@@ -4,16 +4,20 @@ SHELL  =/bin/sh
 EXEPRG = casperDG
 EXEEXT = .serial
 FLGDIR = ../flags
-BINDIR = .
+BINDIR = ..
 VPATH  = ../source
 TARGET = $(BINDIR)/$(EXEPRG)$(EXEEXT)
 
 # List of files
 ALL = my_kinddefs \
     dataModules \
+    sparse_module \
     gauss_points \
     luMatrixInverse_module \
     LU_module \
+    gaussian_elimination_module \
+    newtonRHS_module \
+    form_Jx_module \
     computeJ_detJ_module \
     getElementJacobian_module \
     norm_module \
@@ -25,19 +29,26 @@ ALL = my_kinddefs \
     initializeBasis_module \
     getIC_module \
     projection_module \
+    projectionComplex_module \
     getSourceTerm_module \
     integrate_module \
+    integrateComplex_module \
     flux_module \
     initializeSolution_module \
     bc_module \
     assembleLocMassMatrices_module \
     computeNormal_module \
     residual_module \
+    residualComplex_module \
+    residual_Jac_module \
     get_delta_t_module \
     allocate_module \
     vtu_output_module \
     solutionNorm_module \
     evolveSolution_module \
+    solvers_module \
+    steadySolve_module \
+    testing_module \
     All_Modules \
 
 
