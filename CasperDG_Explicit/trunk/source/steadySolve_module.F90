@@ -40,8 +40,8 @@ Subroutine steadySolve
     real(dp)    :: Res(numFields,totalModes,numTri)
     
     CFLmin  = 100._dp
-    CFLmax  = 10E10
-    alp     = 1.25_dp
+    CFLmax  = 10.0e+10_dp
+    alp     = 1.0_dp
     loop = 0
     implicitConvergeNorm = 1.0e-6_dp
     
@@ -59,7 +59,7 @@ Subroutine steadySolve
     end if
 
     
-    do while(solNorm > 1.0e-12dp)
+    do while(solNorm > 1.0e-12_dp)
         x(:,:) = 0._dp
         Call get_delta_t(solCoeffs)
         Call Lp_norm(spRes,2._dp,solNorm)

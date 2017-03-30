@@ -17,9 +17,9 @@ Program casperDG
     
     ! ----------- Initial Variables ------------ !
     rho_in  = 1._dp
-    P_in    = 1.0/sqrt(1.4)
+    P_in    = 1.0_dp/1.4_dp
 
-    fmach   = 1.0_dp                                  ! Free-stream Mach number
+    fmach   = 0.6_dp                                  ! Free-stream Mach number
     alpha   = 1.25_dp                                   ! angle of attack
     
     ! ----------- Profile Initializations ------------!200,392,578,800,968,1250,1352,1568,1800
@@ -53,7 +53,7 @@ Program casperDG
     ! ----------- Time Stepping Options ------------ !
     CFL         = 1.0_dp
     timeSteps   = 20000
-    timeScheme  = 'Forward_Euler'
+    timeScheme  = 'RK4'
     
     ! ----------- Implicit Newton Options ------------ !
     solver  = 'jacobi'      !Implicit solver: 'jacobi', 'direct'
@@ -61,7 +61,7 @@ Program casperDG
     ! ----------- Resolution Options ------------ !
     basisType       = 'H1'                          ! basis type: H1, nodal, monomial
     mapBasisType    = 'H1'                          ! basis type: H1, nodal
-    basisDegree     = 0                             ! Basis Function Polynomial Order     
+    basisDegree     = 1                             ! Basis Function Polynomial Order     
     mapBasisDegreeCurved = basisDegree + 1          ! map basis polynomial order curved elements
     
     totalModes              = (basisDegree  + 1)*(basisDegree  + 2)/2 

@@ -20,6 +20,8 @@ Module solvers_module
         real(dp)    :: invDr(numFields*totalModes),linResNorm0
         real(dp)    :: Jx(numFields*totalModes,numTri),linResNorm
         
+        integer(i4) :: count
+        
         jacDiagLU = .true.
         Call form_Jx(jacDiagLU,jacobDiag,jacobOffDiagRL,jacobOffDiagLR,x,Jx)
         
@@ -30,6 +32,7 @@ Module solvers_module
         linResNorm0 = linResNorm
         !linResNorm = linResNorm0
         
+        count = 0
         do while (linResNorm/linResNorm0 > convergeNorm)
             do tri_id = 1,numTri
                 Call lu_solve(jacobDiag(:,:,tri_id), linRes(:,tri_id), invDr)
@@ -42,7 +45,9 @@ Module solvers_module
 
             Call Lp_norm2D(linRes,2._dp,linResNorm)
             !print*,'linear norm:',linResNorm/linResNorm0 ,linResNorm   
+            count = count + 1
         end do
+        print*,"Linear Iterations: ",count
         
     end subroutine jacobi_solver
     

@@ -4,7 +4,6 @@ CC = mpicc
 FC = mpif90
 else
 CC = gcc
-FC = /usr/bin/gfortran
 FC = gfortran
 endif
 
@@ -21,7 +20,9 @@ FFLAGS = -O2 -fconvert=big-endian
 
 #FFLAGS = -O0 -pg -fconvert=big-endian -Wall -Wextra -pedantic -fimplicit-none -fbounds-check -fbacktrace #-ffpe-trap=zero,overflow,underflow 
 
-#FFLAGS += -DUSE_LAPACK -Lliblapack.so.3
+FFLAGS += -Dcomplx
+
+#FFLAGS += -DUSE_LAPACK -llapack -lblas 
 
 
 # Linking flags

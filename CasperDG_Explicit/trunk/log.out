@@ -1,0 +1,161 @@
+ Solving steady state using Newton Solver, p =           1
+ entered mesh
+ 
+ # Writing to File...           0
+ CFL :   100.000000000000     
+ Using Jacobi Solver
+ Linear Iterations:           67
+ Jac difference:  1.831850902358373E-006
+ 
+ # Writing to File...           1
+ Norm:  1.529946866148864E-004           1
+ CFL :   213.592714960302     
+ Using Jacobi Solver
+ Linear Iterations:          143
+ Jac difference:  1.166100343345850E-006
+ 
+ # Writing to File...           2
+ Norm:  8.485395066292122E-005           2
+ CFL :   385.115250772333     
+ Using Jacobi Solver
+ Linear Iterations:          257
+ Jac difference:  7.240723349303059E-007
+ 
+ # Writing to File...           3
+ Norm:  6.179502441827806E-005           3
+ CFL :   528.821710100470     
+ Using Jacobi Solver
+ Linear Iterations:          354
+ Jac difference:  4.611701835755420E-007
+ 
+ # Writing to File...           4
+ Norm:  5.107020919131723E-005           4
+ CFL :   639.875007485381     
+ Using Jacobi Solver
+ Linear Iterations:          423
+ Jac difference:  4.002136165154126E-007
+ 
+ # Writing to File...           5
+ Norm:  4.351003693601831E-005           5
+ CFL :   751.057751034044     
+ Using Jacobi Solver
+ Linear Iterations:          476
+ Jac difference:  4.314327368768467E-007
+ 
+ # Writing to File...           6
+ Norm:  3.802954814804719E-005           6
+ CFL :   859.293682937228     
+ Using Jacobi Solver
+ Linear Iterations:          530
+ Jac difference:  3.703321461933929E-007
+ 
+ # Writing to File...           7
+ Norm:  3.551295006415316E-005           7
+ CFL :   920.186873507867     
+ Using Jacobi Solver
+ Linear Iterations:          560
+ Jac difference:  3.500373303462914E-007
+ 
+ # Writing to File...           8
+ Norm:  3.287852138872344E-005           8
+ CFL :   993.917886458911     
+ Using Jacobi Solver
+ Linear Iterations:          594
+ Jac difference:  3.366625793256158E-007
+ 
+ # Writing to File...           9
+ Norm:  2.855236307343271E-005           9
+ CFL :   1144.51299195550     
+ Using Jacobi Solver
+ Linear Iterations:          669
+ Jac difference:  3.072882021431880E-007
+ 
+ # Writing to File...          10
+ Norm:  2.326247656401260E-005          10
+ CFL :   1404.77521379337     
+ Using Jacobi Solver
+ Linear Iterations:          820
+ Jac difference:  2.324891718089630E-007
+ 
+ # Writing to File...          11
+ Norm:  1.817304636137895E-005          11
+ CFL :   1798.18781280512     
+ Using Jacobi Solver
+ Linear Iterations:         1027
+ Jac difference:  1.758692800774735E-007
+ 
+ # Writing to File...          12
+ Norm:  1.390317518570964E-005          12
+ CFL :   2350.43794328095     
+ Using Jacobi Solver
+ Linear Iterations:         1297
+ Jac difference:  1.422066426330498E-007
+ 
+ # Writing to File...          13
+ Norm:  9.901938897041012E-006          13
+ CFL :   3300.21734413443     
+ Using Jacobi Solver
+ Linear Iterations:         1724
+ Jac difference:  9.887791101257196E-008
+ 
+ # Writing to File...          14
+ Norm:  5.438068034576457E-006          14
+ CFL :   6009.22060569977     
+ Using Jacobi Solver
+ Linear Iterations:         2755
+ Jac difference:  5.768990298804382E-008
+ 
+ # Writing to File...          15
+ Norm:  1.882062255418727E-006          15
+ CFL :   17363.1612846429     
+ Using Jacobi Solver
+ Linear Iterations:         5424
+ Jac difference:  1.924550635612878E-008
+ 
+ # Writing to File...          16
+ Norm:  6.643518936842785E-007          16
+ CFL :   49188.6164534725     
+ Using Jacobi Solver
+ Linear Iterations:         7833
+ Jac difference:  6.437651306878620E-009
+ 
+ # Writing to File...          17
+ Norm:  2.602844623326311E-007          17
+ CFL :   125549.370852619     
+ Using Jacobi Solver
+ Linear Iterations:         9712
+ Jac difference:  2.509415809599973E-009
+ 
+ # Writing to File...          18
+ Norm:  5.135679978300777E-008          18
+ CFL :   636304.260130054     
+ Using Jacobi Solver
+ Linear Iterations:        11087
+ Jac difference:  5.408173937234983E-010
+ 
+ # Writing to File...          19
+ Norm:  6.198964057706870E-009          19
+ CFL :   5271614.77052709     
+ Using Jacobi Solver
+ Linear Iterations:        11626
+ Jac difference:  6.154870550456439E-011
+ 
+ # Writing to File...          20
+ Norm:  6.356765797662695E-010          20
+ CFL :   51407510.5623517     
+ Using Jacobi Solver
+ Linear Iterations:        11696
+ Jac difference:  6.142179231452908E-012
+ 
+ # Writing to File...          21
+ Norm:  6.373403684467791E-011          21
+ CFL :   512733103.164528     
+ Using Jacobi Solver
+ Linear Iterations:        11704
+ Jac difference:  6.120722700241891E-013
+ 
+ # Writing to File...          22
+ Norm:  6.375078952955768E-012          22
+ Solution reached steady state
+ 
+ # Writing to File...          23

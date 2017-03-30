@@ -11,6 +11,7 @@ TARGET = $(BINDIR)/$(EXEPRG)$(EXEEXT)
 # List of files
 ALL = my_kinddefs \
     dataModules \
+    globals_module \
     sparse_module \
     gauss_points \
     luMatrixInverse_module \
